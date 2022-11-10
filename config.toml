@@ -1,0 +1,4 @@
+baseURL = 'localhost:1313'
+languageCode = 'en-us'
+title = 'F# by example'
+theme = "hugo-book"
