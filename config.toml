@@ -1,4 +1,0 @@
-baseURL = 'https://camilotk.github.io/fsharp-by-example/'
-languageCode = 'en-us'
-title = 'F# by example'
-theme = "hugo-book"
