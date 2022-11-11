@@ -29,10 +29,10 @@ This will create a folder "Hello" with our main project. Inside this folder we w
 - **Program.fs**: That contains our F# code.
 
 If we open the "Program.fs" file we will see:
-```F#
+{{< highlight "fsharp" >}}
 // For more information see https://aka.ms/fsharp-console-apps
 printfn "Hello from F#"
-```
+{{< / highlight >}}
 And that's the code that prints "Hello from F#" in console! The "Hello World" program is also the example of code of every new F# project.
 
 ### Understanding this code
@@ -46,9 +46,11 @@ The second line starts with a function. For now, you can think of it as "command
 As we don't need the comment since it will not be executed, we can just delete this line. And, as we want to print "Hello World" and not "Hello from F#!", we can change the value to get what we want.
 
 Change **Program.fs** to:
-```F#
+
+{{< highlight "fsharp" >}}
 printfn "Hello World"
-```
+{{< / highlight >}}
+
 
 ## Compiling the project
 
@@ -77,17 +79,18 @@ And you should see "Hello World" printed in your terminal.
 We did the "Hello World" program, but now we can upgrade it to display "Hello" for any value so it would work with "from F#" or "World" as we want. To do this we will change the `printfn` function to print formatted text passing a specifier that will be replaced for the message we want.
 
 So we'll change our **Program.fs** to:
-```F#
+{{< highlight "fsharp" >}}
 printfn "Hello %s" "World"
-```
+{{< / highlight >}}
 
 And then build and run it again!
 
 Now if we want "from F#" instead "World" we can change to:
 So we'll change our **Program.fs** to:
-```F#
+{{< highlight "fsharp" >}}
 printfn "Hello %s" "from F#"
-```
+{{< / highlight >}}
+
 
 Now, if we build and run again, we should see the original message.
 
@@ -96,9 +99,10 @@ Now, if we build and run again, we should see the original message.
 F# is different from how some other languages works with Types. This means that each piece of information has to be from the expected type in order to work. For example, the `%s` specifier expects a `String` type (a message between `"..."`) if we try to pass a number, for example `42`, we will get an error.
 
 Try doing this, passing 42 as the message:
-```F#
+{{< highlight "fsharp" >}}
 printfn "Hello %s" 42
-```
+{{< / highlight >}}
+
 
 If you try to build this program, you'll get the error:
  ```
