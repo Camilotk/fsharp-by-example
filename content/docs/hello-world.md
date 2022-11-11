@@ -72,7 +72,7 @@ And you should see "Hello World" printed in your terminal.
 
 **Congratulations!** You done your first F# program.
 
-## Next level
+## Going to the next level
 
 We did the "Hello World" program, but now we can upgrade it to display "Hello" for any value so it would work with "from F#" or "World" as we want. To do this we will change the `printfn` function to print formatted text passing a specifier that will be replaced for the message we want.
 
@@ -91,7 +91,7 @@ printfn "Hello %s" "from F#"
 
 Now, if we build and run again, we should see the original message.
 
-## A taste of static typed language
+### A taste of a statically typed language
 
 F# is different from how some other languages works with Types. This means that each piece of information has to be from the expected type in order to work. For example, the `%s` specifier expects a `String` type (a message between `"..."`) if we try to pass a number, for example `42`, we will get an error.
 
