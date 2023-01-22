@@ -2,9 +2,8 @@
 title: "Hello World in F#"
 date: 2022-11-10T10:31:11+03:00
 draft: false
+weight: 1
 ---
-
-## Hello World
 
 The first program that anyone will always do first when starting to learn a new programming language is a program that prints "hello world" in a terminal. We'll do that for practice, to get used to the language and environment.
 
