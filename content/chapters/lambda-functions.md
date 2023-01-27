@@ -2,7 +2,7 @@
 title: "Lambda Functions"
 date: 2023-01-22T22:05:50-03:00
 draft: false
-weight: 5
+weight: 6
 ---
 
 In F#, lambda functions - or if you prefer, anonymous functions - are defined using the `fun` keyword. These functions are useful for creating small, one-time-use functions that don't need to be named. They can be passed as arguments to other functions, and can be used to create higher-order functions.

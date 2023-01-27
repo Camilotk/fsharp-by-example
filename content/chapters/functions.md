@@ -2,7 +2,7 @@
 title: "Functions"
 date: 2023-01-21T22:22:09-03:00
 draft: false
-weight: 4
+weight: 5
 ---
 
 F# is a functional programming language that allows developers to create powerful and expressive code. One of the key features of F# is its support for functions, which are used to perform specific tasks and return a value. In this chapter, we will explore the basics of functions in F# and how they can be used to create reusable and composable code.
