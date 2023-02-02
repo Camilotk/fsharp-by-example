@@ -5,7 +5,7 @@ draft: false
 weight: 15
 ---
 
-F# is a statically typed language, meaning that the type of a value must be known at compile-time. F# has several built-in types that can be used to represent values in your programs. In this chapter, we will explore the basic types in F# and how to use them.
+F# is a statically typed language, meaning that the type of a value must be known at compile-time. F# has several built-in types that can be used to represent values in your programs. We'll explore the basic types in F# and how to use them.
 
 ## Numbers
 
