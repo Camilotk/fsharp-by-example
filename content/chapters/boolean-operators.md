@@ -66,6 +66,5 @@ if not (x > 10) then
 else
   printfn "The condition is true"
 
-
 // Output: The condition is false
 ```
