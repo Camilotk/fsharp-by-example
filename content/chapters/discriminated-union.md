@@ -1,7 +1,7 @@
 ---
 title: "Discriminated Union"
 date: 2023-03-18T15:28:23-03:00
-weight: 28
+weight: 31
 ---
 
 ## Discriminated Union in F#

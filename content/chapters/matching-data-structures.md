@@ -1,7 +1,7 @@
 ---
 title: "Pattern Matching on Data Structures"
 date: 2023-03-18T18:23:02-03:00
-weight: 32
+weight: 35
 ---
 
 Pattern matching is a powerful feature in F# that allows you to extract and work with the values in data structures such as tuples, lists, arrays, discriminated unions, and records. In this chapter, we'll explore how to use pattern matching to work with these data structures.

@@ -1,7 +1,7 @@
 ---
 title: "Structural Equality"
 date: 2023-03-18T17:04:26-03:00
-weight: 29
+weight: 32
 ---
 
 ## Structural Equality in F# vs. Referential Equality in C#
