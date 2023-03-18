@@ -14,7 +14,7 @@ A Discriminated Union is defined using the type keyword, followed by the name of
 
 Let's take a look at an example of a discriminated union that represents French playing cards:
 
-```F#
+```FSharp
 type Suit = Spades | Hearts | Diamonds | Clubs
 ```
 > Note that the cases have to be defined using PascalCase.
@@ -25,7 +25,7 @@ We defined a discriminated union called `Suit` with four cases: `Spades`, `Heart
 
 Discriminated Union can also have additional data associated with each case. The type of this data can be anything from primitives to tuples, records, and even other Discriminated Unions. Let's take the previous example of defining cards and create our ranks adding additional data to each rank representing the point value:
 
-```F#
+```FSharp
 type Rank =
   | Ace of int
   | King of int
@@ -40,7 +40,7 @@ type Rank =
 
 In this example, each case of the Discriminated Union Rank has an additional int value associated with it, representing the point value for each rank. We can initialize a value of Rank by providing the int value associated with the specific rank. For example:
 
-```F#
+```FSharp
 let ace = Ace(14)
 let six = Six(6)
 ```
@@ -49,7 +49,7 @@ let six = Six(6)
 
 Discriminated Unions can also be combined to create more complex data types. For example, let's consider two Discriminated Unions, one defining the card ranks and another defining the card suits, we can now define a Union Type with two cases, where the first case indicates that the card is a joker, and the second case defines that it is a regular card, which is a value consisting of a Rank and a Suit:
 
-```F#
+```FSharp
 type Card =
   | Joker
   | Regular of Rank * Suit
@@ -57,7 +57,7 @@ type Card =
 
 In this example, Joker is the first case of the Discriminated Union Card and it has no additional data associated with it. The second case, Regular, has additional data of type Rank * Suit, which is a tuple of a Rank and a Suit. We can initialize values of Card by providing the Rank and Suit values associated with the regular card:
 
-```F#
+```FSharp
 let joker = Joker
 let aceOfSpades = Regular(Ace(1), Spades)
 let tenOfHearts = Regular(Ten(10), Hearts)
