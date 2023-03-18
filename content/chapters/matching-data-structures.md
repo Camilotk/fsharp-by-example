@@ -95,6 +95,7 @@ let card = { Suit = Spades; Rank = Ace(1) }
 
 match card with
 | { Suit = suit; Rank = rank } -> printfn "Suit: %A, Rank: %A" suit rank
+// Output: Suit: Spades, Rank: Ace 1
 ```
 
 In this example, we have defined a value of `Card` called `card`, which is a Spades Ace. We then use the `match` keyword to pattern match against the `card` value. The first case that we define in the `match` expression is `{ Suit = suit; Rank = rank }`, which matches against any value that is a `Card` record. We then use `printfn` to print out the suit and rank values.
