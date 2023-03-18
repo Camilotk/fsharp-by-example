@@ -12,7 +12,7 @@ To create an array, we use the same syntax as for lists, but with pipes instead 
 
 ```fsharp
 [|1; 2; 3|]
-// => [|1; 2; 3|]
+// Output: [|1; 2; 3|]
 ```
 
 The result of the code above is an array containing the values 1, 2, and 3.
@@ -23,7 +23,7 @@ To access an item in an array, we use the syntax of square brackets and the posi
 
 ```fsharp
 [|1; 2; 3|].[1]
-// => 2
+// Output: 2
 ```
 
 The code above will return the second item in the array, which is 2.
@@ -37,16 +37,16 @@ let arr = [| 1; 2; 3 |]
 
 // Adding an element to the end of the array
 let newArr = Array.append arr [| 4 |]
-// => [|1; 2; 3; 4|]
+// Output: [|1; 2; 3; 4|]
 
 // Adding an element to the beginning of the array
 let newArr2 = Array.append [| 0 |] arr
-// => [|0; 1; 2; 3|]
+// Output: [|0; 1; 2; 3|]
 
 // Adding elements at a specific index
 let idx = 1
 let newArr3 = Array.concat [ arr.[0..idx-1]; [| 10; 20 |]; arr.[idx..] ]
-// => [|1; 10; 20; 2; 3|]
+// Output: [|1; 10; 20; 2; 3|]
 ```
 
 ## List Comprehensions in Arrays
@@ -56,7 +56,7 @@ Arrays support list comprehensions in the same way as lists. We can use the for.
 ```fsharp
 [| for x in [1..3]
      do yield 2 * x |]
-// => [|2; 4; 6|]
+// Output: [|2; 4; 6|]
 ```
 
 In this example, we create an array of doubled values from the range 1 to 3.
