@@ -1,7 +1,7 @@
 ---
-title: "Pattern Matching Functions "
+title: "Pattern Matching Functions"
 date: 2023-03-18T17:50:11-03:00
-weight: 30
+weight: 31
 ---
 
 Pattern matching functions are an alternative way of writing match expressions in F#. With this syntax, instead of using the `match...with` structure, you can create a function that takes a value and pattern matches on it using the `function` keyword.
