@@ -4,8 +4,6 @@ date: 2023-03-18T16:53:06-03:00
 weight: 30
 ---
 
-# Pattern Matching
-
 Pattern matching is a powerful feature in functional programming languages that allows you to match a value or data structure against a set of patterns and execute the corresponding code block based on the match. It is a declarative and expressive way of branching code based on data values, and it can be used to simplify complex conditional logic.
 
 In F#, pattern matching is a first-class citizen, which means it is deeply integrated into the language syntax and semantics. F# provides a rich set of pattern matching constructs, such as matching on values, tuples, lists, arrays, discriminated unions, and more.
