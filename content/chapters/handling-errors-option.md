@@ -1,5 +1,5 @@
 ---
-title: "Haddling Errors with Option"
+title: "Handling Errors with Option"
 date: 2023-05-27T19:23:14-03:00
 weight: 43
 ---
