@@ -1,7 +1,7 @@
 ---
 title: "Choice"
 date: 2023-05-27T19:43:08-03:00
-weight: 44
+weight: 45
 ---
 
 The Choice type is built to represent mutually exclusive possibilities. It contains two alternatives that represent the choice between two types. The value can be of either the first type or the second type. The Choice type is commonly used to represent a result that can be an error.
