@@ -17,7 +17,7 @@ weight: 47
 ```FSharp
  let squaredNumbers = Seq.map (fun x -> x * x) mySequence
 ```
-Here, we use the `map` function to create a new sequence **squaredNumbers** by squaring each element of **mySequence**. 
+Here, we use the `map` function to create a new sequence **squaredNumbers** by squaring each element of **mySequence**.
 
 ## filter
 
