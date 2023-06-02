@@ -11,7 +11,7 @@ weight: 47
  let mySequence = seq { 1 .. 10 }
  ```
 
- ## Seq.map
+ ## map
 
  Mapping allows us to transform each element of a sequence into another value using a given function. F# provides the `map` function in the Seq module for this purpose. Let's illustrate this with an example:
 
@@ -21,7 +21,7 @@ weight: 47
 
 Here, we use the `map` function to create a new sequence **squaredNumbers** by squaring each element of **mySequence**. The function `fun x -> x * x` performs the squaring operation.
 
-## Seq.filter
+## filter
 
 The Seq module provides various functions to filter sequences based on certain conditions. One such function is `filter`. The `filter` function takes a predicate and returns a new sequence that contains only the elements that satisfy the predicate. Let's see an example:
 ```Fsharp
@@ -29,7 +29,7 @@ let evenNumbers = Seq.filter (fun x -> x % 2 = 0) mySequence
 ```
 In this example, we use the `filter` function to create a new sequence **evenNumbers** that contains only the even numbers from **mySequence**. The predicate `fun x -> x % 2 = 0` checks if the element **x** is divisible by 2.
 
-## Seq.fold
+## fold
 
 Folding, also known as reduction, is a common operation that combines all the elements of a sequence into a single value. The `fold` and `foldBack` functions in the Seq module allow us to perform folding operations. Let's consider an example:
 ```Fsharp
