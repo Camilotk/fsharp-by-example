@@ -14,12 +14,10 @@ weight: 47
  ## map
 
  Mapping allows us to transform each element of a sequence into another value using a given function. F# provides the `map` function in the Seq module for this purpose. Let's illustrate this with an example:
-
 ```FSharp
  let squaredNumbers = Seq.map (fun x -> x * x) mySequence
 ```
-
-Here, we use the `map` function to create a new sequence **squaredNumbers** by squaring each element of **mySequence**. The function `fun x -> x * x` performs the squaring operation.
+Here, we use the `map` function to create a new sequence **squaredNumbers** by squaring each element of **mySequence**. 
 
 ## filter
 
@@ -27,7 +25,7 @@ The Seq module provides various functions to filter sequences based on certain c
 ```Fsharp
 let evenNumbers = Seq.filter (fun x -> x % 2 = 0) mySequence
 ```
-In this example, we use the `filter` function to create a new sequence **evenNumbers** that contains only the even numbers from **mySequence**. The predicate `fun x -> x % 2 = 0` checks if the element **x** is divisible by 2.
+In this example, we use the `filter` function to create a new sequence **evenNumbers** that contains only the even numbers from **mySequence**.
 
 ## fold
 
@@ -37,8 +35,50 @@ let sum = Seq.fold (fun acc x -> acc + x) 0 mySequence
 ```
 In this example, we use the `fold` function to calculate the sum of all elements in **mySequence**. The initial value `0` is provided as the starting point for the accumulation, and the function `fun acc x -> acc + x` defines how to combine the accumulator **acc** with each element **x** of the sequence.
 
-The Seq library provides many more functions to manipulate sequences. Here are a few notable ones:
-- `head` and `tail`: These functions return the first element and the remaining elements of a sequence, respectively.
-- `take` and `skip`: These functions allow us to take or skip a specified number of elements from a sequence.
-- `sortBy` and `sortWith`: These functions enable sorting a sequence based on a specified order.
-- `exists` and `forAll`: These functions check whether any element in the sequence satisfies a given predicate. It returns true if at least one element matches the condition, otherwise false. Conversely, the forAll function checks if all elements in the sequence satisfy a given predicate. It returns true if every element matches the condition, otherwise false.
+## take
+
+The `take` function allows us to take a specified number of elements from the beginning of a sequence. Let's see an example:
+```Fsharp
+let firstThree = Seq.take 3 mySequence
+```
+In this example, we use the `take` function to create a new sequence **firstThree** that contains the first three elements from **mySequence**.
+
+## skip
+
+The `skip` function allows us to skip a specified number of elements from the beginning of a sequence and return the remaining elements. Let's see an example:
+```Fsharp
+let remainingSeven = Seq.skip 3 mySequence
+```
+In this example, we use the `skip` function to create a new sequence **remainingSeven** that contains the remaining seven elements from **mySequence** after skipping the first three elements.
+
+## sortBy
+
+The `sortBy` function enables sorting a sequence based on a specified order. Let's see an example:
+```Fsharp
+let sortedNumbers = Seq.sortBy (fun x -> -x) mySequence
+```
+In this example, we use the `sortBy` function to create a new sequence sortedNumbers that contains the elements of **mySequence** sorted in descending order.
+
+## sortWith
+
+The `sortWith` function enables sorting a sequence based on a custom comparison function. Let's see an example:
+```Fsharp
+let sortedNumbers = Seq.sortWith (fun x y -> compare y x) mySequence
+```
+In this example, we use the `sortWith` function to create a new sequence **sortedNumbers** that contains the elements of **mySequence** sorted in descending order. 
+
+## exists
+
+The `exists` function checks whether any element in the sequence satisfies a given predicate. It returns `true` if at least one element matches the condition, otherwise `false`. Let's see an example:
+```Fsharp
+let hasEvenNumber = Seq.exists (fun x -> x % 2 = 0) mySequence
+```
+In this example, we use the `exists` function to check if **mySequence** contains any even number.
+
+## forAll
+
+The `forAll` function checks if all elements in the sequence satisfy a given predicate. It returns `true` if every element matches the condition, otherwise `false`. Let's see an example:
+```Fsharp
+let allEvenNumbers = Seq.forAll (fun x -> x % 2 = 0) mySequence
+```
+In this example, we use the `forAll` function to check if all numbers in **mySequence** are even.
