@@ -9,27 +9,51 @@ In this first part we will be discussing how to create, set, and use variables i
 
 ## Creating variables
 
-In F#, variables are created using the `let` keyword. The basic syntax for creating a variable is as follows:
 ```fsharp
+// Lesson: Creating and Setting Variables in F#
+
+// In this lesson, we will learn how to create, set, and use variables in F#.
+// Variables are used to store and manipulate data and are fundamental in programming.
+
+// Creating Variables
+// In F#, variables are created using the 'let' keyword with the following syntax:
 let variable_name = value
-```
-For example, to create a variable called "x" and set its value to 5, we would use the following code:
-```fsharp
+
+// For example, to create a variable called "x" and set its value to 5:
 let x = 5
-```
-You can also create a variable and define its type using the ":" operator, like this:
-```fsharp
+
+// You can also explicitly specify the type of the variable using the ":" operator:
 let x : int = 5
-```
 
-## Setting Variables
-
-In F#, variables are set using the "let" keyword, followed by the variable name, an equal sign (=), and the value to be assigned to the variable. For example:
-
-```fsharp
+// Setting Variables
+// To set a variable's value, use the 'let' keyword followed by the variable name, an equal sign (=),
+// and the value to be assigned:
 let x = 5
+
+// Once a variable is set, its value cannot be directly modified because F# variables are immutable by default.
+
+// Explanation:
+// In this lesson, we introduced the concept of variables in F#. We saw how to create and set variables using the 'let' keyword.
+// We also learned that F# variables are immutable by default, meaning their values cannot be changed after being set.
+// This feature makes F# a functional programming language, contributing to improved program performance and predictability.
+
+// Interactive Exploration:
+// 1. Open a terminal or command prompt.
+// 2. Navigate to the directory containing this .fsx file.
+// 3. Launch the F# REPL by typing `dotnet fsi` and pressing Enter.
+
+// Now, you can experiment with creating and setting variables interactively in the REPL.
 ```
+⬇️ [variables.fsx](#)
 
-This creates a new variable named "x" and assigns the value of 5 to it.
+```
+$ dotnet fsi
 
-Once a variable is set, its value cannot be modified directly. This is because F# variables are immutable by default, which means that their value cannot be changed once they are set.
+> #load "variables.fsx";;
+> x;;
+val it: int = 5
+> let y = 7;;
+val y: int = 7
+> x <- 10;;
+error FS0027: This value is not mutable. Consider using the mutable keyword, e.g. 'let mutable x = 10'.
+```
