@@ -17,7 +17,7 @@ Concatenates two lists together
 let list1 = [1; 2; 3]
 let list2 = [4; 5; 6]
 
-let concatenated = List.append list1 list2 // concatenated will be [1; 2; 3; 4; 5; 6]
+let concatenated = List.append list1 list2 // => val concatenated: int list = [1; 2; 3; 4; 5; 6]
 ```
 
 ### length
@@ -26,7 +26,7 @@ Returns the length of a list
 ```fsharp
 let myList = [1; 2; 3; 4; 5]
 
-let length = List.length myList // length will be 5
+let length = List.length myList // => val length: int = 5
 ```
 
 ### exists
@@ -35,7 +35,7 @@ Returns true if at least one element in a list satisfies a given predicate
 ```fsharp
 let myList = [1; 3; 5; 7; 8; 9]
 
-let hasEven = List.exists (fun x -> x % 2 = 0) myList // hasEven will be true
+let hasEven = List.exists (fun x -> x % 2 = 0) myList // => val hasEven: bool = true
 ```
 
 ### forAll
@@ -44,11 +44,11 @@ Returns true if all elements in a list satisfy a given predicate
 ```fsharp
 let myList = [2; 4; 6; 8]
 
-let allEven = List.forAll (fun x -> x % 2 = 0) myList // allEven will be true
+let allEven = List.forall (fun x -> x % 2 = 0) myList // => val allEven: bool = true
 
 let myList2 = [2; 4; 6; 7; 8]
 
-let allEven2 = List.forAll (fun x -> x % 2 = 0) myList2 // allEven2 will be false
+let allEven2 = List.forAll (fun x -> x % 2 = 0) myList2 // => val allEven2: bool = false
 ```
 
 ### sortBy
@@ -57,7 +57,8 @@ Sorts a list by a given comparison function
 ```fsharp
 let myList = ["apple"; "banana"; "cherry"; "date"; "elderberry"]
 
-let sortedList = List.sortBy (fun x -> x.Length) myList // sortedList will be ["date"; "apple"; "cherry"; "banana"; "elderberry"]
+let sortedList = List.sortBy (fun (x : string) -> x.Length) myList 
+// => val sortedList: string list = ["date"; "apple"; "banana"; "cherry"; "elderberry"]
 ```
 
 ### take
@@ -66,7 +67,7 @@ Returns the first n elements of a list
 ```fsharp
 let myList = [1; 2; 3; 4; 5; 6; 7]
 
-let firstThree = List.take 3 myList // firstThree will be [1; 2; 3]
+let firstThree = List.take 3 myList // => val firstThree: int list = [1; 2; 3]
 ```
 
 ### skip
@@ -75,6 +76,5 @@ Skips the first n elements of a list
 ```fsharp
 let myList = [1; 2; 3; 4; 5; 6; 7]
 
-let afterThree = List.skip 3 myList // afterThree will be [4; 5; 6; 7]
+let afterThree = List.skip 3 myList // => val afterThree: int list = [4; 5; 6; 7]
 ```
-
