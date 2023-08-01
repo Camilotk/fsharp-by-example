@@ -90,6 +90,7 @@ let result = concatFunction 5 "hello" // result is "5hello"
 $ dotnet fsi
 
 > #load "functions.fsx";;
+> open Functions;;
 > add 2 3;;
 val it: int = 5
 

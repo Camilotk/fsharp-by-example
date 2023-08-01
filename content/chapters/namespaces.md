@@ -109,6 +109,7 @@ printfn "Result 4: %d" result4
 $ dotnet fsi
 
 > #load "namespace.fsx";;
+> open Namespace;;
 > let result1 = MyNamespace.myValue;;
 val result1 : int = 42
 

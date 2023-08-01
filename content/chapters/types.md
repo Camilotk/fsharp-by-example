@@ -72,6 +72,7 @@ let bigInt = BigInteger(1000000000000000000)
 $ dotnet fsi
 
 > #load "types.fsx";;
+> open Types;;
 
 > let booleanValue = true;;
 val booleanValue : bool = true

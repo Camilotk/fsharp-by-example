@@ -95,6 +95,7 @@ let addTwoNumbersPartial = (fun x y -> x + y)
 $ dotnet fsi
 
 > #load "lambda.fsx";;
+> open Lambda;;
 > let multiplyTwoNumbers = (fun x y -> x * y);;
 > multiplyTwoNumbers 2 3;;
 val it: int = 6

@@ -73,6 +73,7 @@ let evens numbers = numbers |> List.filter (not << fun n -> n % 2 = 0)
 $ dotnet fsi
 
 > #load "composition.fsx";;
+> open Composition;;
 > let f x = x + 1;;
 > let g x = x * 2;;
 > let h = f >> g;;

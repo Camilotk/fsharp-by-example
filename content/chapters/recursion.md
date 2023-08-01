@@ -64,6 +64,7 @@ let rec fib n =
 $ dotnet fsi
 
 > #load "recursion.fsx";;
+> open Recursion;;
 > let rec factorial n =
     if n = 0 then 1
     else n * factorial (n - 1);;

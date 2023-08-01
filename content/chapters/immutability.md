@@ -74,11 +74,12 @@ y <- 10 // y value changes to 10
 
 // You can proceed to the next part of the lesson to learn more about control flow in F#.
 ```
-⬇️ [variables.fsx](#)
+⬇️ [shadowing.fsx](#)
 ```
 $ dotnet fsi
 
 > #load "shadowing.fsx";;
+> open Shadowing;;
 > x;;
 val it: int = 10
 

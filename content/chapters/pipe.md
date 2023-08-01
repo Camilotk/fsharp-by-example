@@ -48,6 +48,7 @@ let result5 = (6, 5, 2) |||> (fun x y z -> x + y * z) // result is 16
 ```
 $ dotnet fsi
 > #load "pipeline_operators_example.fsx";;
+> open Pipeline_operators_example;;
 > // The code from the file is now imported and executed in the FSI session
 
 > // Result of the expressions:

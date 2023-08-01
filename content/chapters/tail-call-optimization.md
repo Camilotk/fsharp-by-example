@@ -83,6 +83,7 @@ printfn "Fibonacci number at position 6 is %d" fibonacciResult // Output: Fibona
 $ dotnet fsi
 
 > #load "tail_call_optimization.fsx";;
+> open Tail_call_optimization;;
 > factorialTailOptimized 5 1;;
 val it: int = 120
 > fibonacciTailOptimized 6 0 1;;

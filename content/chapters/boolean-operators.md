@@ -35,11 +35,10 @@ else
 ⬇️ [logical_operators_example.fsx](#)
 ```
 $ dotnet fsi
-> #load "logical_operators_example.fsx";;
-> // The code from the file is now imported and executed in the FSI session
 
-> // You can see the results of the expressions:
-> Both conditions are true
-> Either condition is true
-> The condition is false
+> #load "logical_operators_example.fsx";;
+[Loading ...bool.fsx]
+Both conditions are true
+Either condition is true
+The condition is false
 ```
