@@ -73,6 +73,7 @@ printfn "Result 2: %d" result2
 $ dotnet fsi
 
 > #load "modules.fsx";;
+> open Modules;;
 > let result1 = MathFunctions.add 2 3;;
 val result1 : int = 5
 

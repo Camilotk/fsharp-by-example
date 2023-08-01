@@ -58,7 +58,7 @@ type Calculator =
 ⬇️ [modules_vs_namespaces.fsx](#)
 ```
 > #load "modules_vs_namespaces.fsx";;
-
+> open Modules_vs_namespaces;;
 // Access the module members from MyModule
 > MyModule.add 10 5;;
 val it : int = 15

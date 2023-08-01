@@ -46,15 +46,14 @@ printMessage "Hello, World!"
 ```
 ⬇️ [unit_type_example.fsx](#)
 ```
-> // Load the .fsx file to import the code into the FSI session
-> #load "unit_type_example.fsx";;
-> // The code from the file is now imported and accessible in the FSI session
+$ dotnet fsi
 
-> // You can now run the code interactively:
+> #load "unit_type_example.fsx";;
+> open Unit_type_example;;
+
 > myUnit;;
 val it : unit = ()
 
-> // The function `printMessage` will print "Hello, World!" to the console and return unit
 > printMessage "Hello, World!";;
 Hello, World!
 val it : unit = ()

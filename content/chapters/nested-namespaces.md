@@ -97,6 +97,7 @@ printfn "Result 4: %d" result4
 $ dotnet fsi
 
 > #load "nested_namespace.fsx";;
+> open Nested_namespace;;
 > let result1 = ParentNamespace.ChildNamespace.childValue;;
 val result1 : int = 42
 

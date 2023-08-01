@@ -50,6 +50,7 @@ let x = 5
 $ dotnet fsi
 
 > #load "variables.fsx";;
+> open Variables;;
 > x;;
 val it: int = 5
 > let y = 7;;

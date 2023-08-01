@@ -63,9 +63,8 @@ printfn "floatValue: %f" floatValue
 ```
 $ dotnet fsi
 > #load "casting_example.fsx";;
-> // The code from the file is now imported and executed in the FSI session
+> open Casting_example;;
 
-> // You can see the results of the expressions:
 > intValue: 42
 > stringValue: "42"
 > circleValue: 3.14

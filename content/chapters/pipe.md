@@ -6,50 +6,55 @@ weight: 10
 
 F# also has pipeline operators, or pipe operators, which allow us to chain function calls together in a readable way. The pipeline operator `|>` takes the output of the expression on the left-hand side and uses it as the input for the function on the right-hand side.
 
-For example, let's say we have a function `f` that takes an integer as input and returns an integer as output. We can call this function and pass in the result of another expression using the pipeline operator:
+# Pipes
 
-```fsharp
-2 |> f
 ```
+// Pipeline Operator
 
-This is equivalent to:
+// For example, let's say we have a function `f` that takes an integer as input and returns an integer as output.
+// We can call this function and pass in the result of another expression using the pipeline operator:
+let f x = x + 1
 
-```fsharp
-f 2
+let result1 = 2 |> f // Equivalent to: f 2
+
+// We can also chain multiple function calls together using the pipeline operator:
+let g x = x * 2
+let h x = x - 1
+
+let result2 = 2 |> f |> g |> h // f 2 |> g |> h
+
+// Backward Pipeline Operator
+
+// This operator is used to compose functions from right to left.
+// It takes the output of the function on the right side and uses it as the input for the function on the left side.
+// For example, the following code composes the same two functions as before, but in reverse order:
+let sin x = System.Math.Sin(x)
+
+let result3 = sin <| 2. + 1.
+
+// Pipeline with Multiple Arguments
+
+// To pipe the output from a function or values to another function, it is necessary for the functions to have only one argument,
+// or it will give us an error. For functions with multiple arguments, we can use the pipe operators with different numbers of pipes.
+let min a b = if a < b then a else b
+
+let result4 = (3, 7) ||> min // result is 3
+
+let result5 = (6, 5, 2) |||> (fun x y z -> x + y * z) // result is 16
+
+// If your function needs four or more arguments, it's a better idea to compose it in smaller parts than to use piping.
 ```
-
-We can also chain multiple function calls together using the pipeline operator:
-
-```fsharp
-2 |> f |> g |> h
+⬇️ [logical_operators_example.fsx](#)
 ```
+$ dotnet fsi
+> #load "pipeline_operators_example.fsx";;
+> open Pipeline_operators_example;;
+> // The code from the file is now imported and executed in the FSI session
 
-This will take the integer 2, pass it through the function `f`, take the output and pass it through the function `g`, then take the output of that and pass it through the function `h`.
-
-## Backward pipeline
-
-This operator is used to compose functions from right to left. It takes the output of the function on the right side and uses it as the input for the function on the left side. For example, the following code composes the same two functions as before, but in reverse order:
-
-```fsharp
-sin <| 2. + 1. // result is 0.1411200081
+> // Result of the expressions:
+> val result1 : int = 3
+> val result2 : int = 3
+> val result3 : float = 0.1411200081
+> val result4 : int = 3
+> val result5 : int = 16
 ```
-
-## Pipeline with multiple arguments
-
-For to be possible pipe the output from a funtion or values to another function is necessary it have only one argument or it will give us an error:
-
-```fsharp
-3 7 |> min // Error
-```
-
-For this function we have to use the double pipe operator:
-```fsharp
-(3,7) ||> min // result is 3
-```
-
-If the function has three operators you have to use the triple pipe operator:
-```fsharp
-(6,5,2) |||> (fun x y z -> x + y * z) // result is 16
-```
-
-If your function needs four or more arguments its a better idea compose it in smaller parts to them work togheter than use piping.

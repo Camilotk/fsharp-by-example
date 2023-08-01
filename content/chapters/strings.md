@@ -19,18 +19,18 @@ let name = "John Doe"
 
 // String interpolation is a feature in F# that allows you to embed expressions within a string literal.
 // The expression is enclosed in curly braces {} and is evaluated at runtime:
-let name = "Don Syme"
-let age = 51
-printfn $"Name: {name}, Age: {age}"
+let fs_name = "Don Syme"
+let fs_age = 51
+printfn $"Name: {fs_name}, Age: {fs_age}"
 
 // Output: Name: Don Syme, Age: 51
 
 // Interpolated strings can also have F# format specifiers to enforce type safety:
-let name = "Camilo de Azevedo"
-let age = 27
+let other_name = "Camilo de Azevedo"
+let other_age = 27
 
 // Exercise: Change the name and age in the following interpolated string.
-printfn $"Name: %s{name}, Age: %d{age}"
+printfn $"Name: %s{other_name}, Age: %d{other_age}"
 // Output: Name: Camilo de Azevedo, Age: 27
 
 // Uncomment the following line to see the error message.
@@ -41,9 +41,14 @@ printfn $"Name: %s{name}, Age: %d{age}"
 ```
 $ dotnet fsi
 > #load "string_interpolation_example.fsx";;
-> // The code from the file is now imported and executed in the FSI session
+[Loading ...strings_example.fsx]
+Name: Don Syme, Age: 51
+Name: Camilo de Azevedo, Age: 27
 
-> // You can see the results of the expressions:
-> Name: Don Syme, Age: 51
-> Name: Camilo de Azevedo, Age: 27
+> let print_name name = printfn "%s" $"Name: {name}";;
+val print_name: name: 'a -> unit
+
+> print_name "Your_Name";;                          
+Name: Your_Name
+val it: unit = ()
 ```
